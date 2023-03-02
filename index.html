@@ -1,0 +1,100 @@
+<!DOCTYPE >
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Manipulating the DOM</title>
+  <!-- Load Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans:900|Merriweather&display=swap" rel="stylesheet">  <!-- Load Styles -->
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+  <!-- HTML Follows BEM naming conventions 
+  IDs are only used for sections to connect menu achors to sections -->
+  <header class="page__header">
+    <nav class="navbar__menu">
+      <!-- Navigation starts as empty UL that will be populated with JS -->
+      <ul id="navbar__list"></ul>
+    </nav>
+  </header>
+  <main>
+    <header class="main__hero">
+      <h1>Landing Page </h1>
+    </header>
+    <!-- Each Section has an ID (used for the anchor) and 
+    a data attribute that will populate the li node.
+    Adding more sections will automatically populate nav.
+    The first section is set to active class by default -->
+    <section id="section1" data-nav="Section 1" class="your-active-class">
+      <div class="landing__container">
+        <h2>Animal Trading Cards</h2>
+        <p> Page resembles card from design prototype
+        
+          * The text is italicized for the animal’s interesting fact.
+          * The labels are bolded for the animal’s list items.
+          * The dots are removed from the animal's list items.
+          * Uses border around animal’s name, image, and information (interesting fact, list items, and description).
+          * Uses border around animal’s information.
+          * Uses spacing between animal’s name, image, and information.
+          * Card width should be fixed and include the spacing around the image(Since image is 300px wide, card should be 300px + spacing on either side. Card should not expand with the browser window).</p>
+
+        <p> Feel free to customize your information and styles so long as you follow the above rules. For inspiration, you can try playing around with background colors or border radius!</p>
+      </div>
+    </section>
+    <section id="section2" data-nav="Section 2">
+      <div class="landing__container">
+        <h2>Personal Blog Website</h2>
+        <p>   Suggestions to Make Your Project Stand Out!
+          Custom Text: You are welcome to use Lorem ipsum or other placeholder text in your blog and blog posts, but putting in real, custom text can make your project look even more impressive!
+          Pattern - Related Articles: Add 2 to 3 fake blog post references after the blog post ends (i.e. to older blog posts)
+          Pattern - Subscribe Form: Instead of a fake subscribe link on the blog, there is an actual form area with name and email input fields and a subscribe button.
+          Project URL: Project is fully deployed on GitHub Pages, Netlify or another hosting provider that is free of charge.
+          Design System: Consider implementing a design system for your webpage.</p>
+        <p> Accessibility:
+          Discernable text
+          Sufficient color contrast
+          ARIA attributes
+          Less than 5 violations found through the Axe (Chrome extension) test on the web page.</p>
+      </div>
+    </section>
+    <section id="section3" data-nav="Section 3">
+      <div class="landing__container">
+        <h2>Build a Shopping Cart</h2>
+        <p> Javascript functions are created to implement required functionality:
+          * cartTotal(): calculates and returns the cost of all items in the cart.
+          * pay(amount): takes in an amount from the text field and checks if the amount is greater or less than the value of cartTotal. Returns the positive or negative difference.</p>  
+        <p> 
+          Suggestions to Make Your Project Stand Out!
+          * Remove all items from the cart.
+          * Integrate a currency switcher to switch between USD, EUR, and YEN.
+          * Implement currency formatting to accommodate USD, EUR, and YEN.
+          * Come back once you're familiar with the DOM API, HTML, and CSS and try the following:
+              * Change/update the formatting of the store.
+              * Add a mock credit card form with form validation.
+              * Create a form for adding more products.
+          </p>
+      </div>
+    </section>
+    <section id="section4" data-nav="Section 4">
+        <div class="landing__container">
+          <h2>Landing Page</h2>
+          <p> The project should have a structure like the one shown below. All files shown must be present and the app must successfully render a home page with clear design and functionality added when index.html is loaded in the browser. No errors should display in console.</p>
+  
+          <p>See the "Suggested" items section in Development Strategy in the classroom.
+
+            Add an active state to your navigation items when a section is in the viewport.
+            Hide fixed navigation bar while not scrolling (it should still be present on page load).
+            Hint: setTimeout can be used to check when the user is no longer scrolling.
+            Add a scroll to top button on the page that’s only visible when the user scrolls below the fold of the page.
+            Update/change the design/content.
+            Make sections collapsible.</p>
+        </div>
+      </section>
+  </main>
+  <footer class="page__footer">
+    <p>&copy Udacity</p>
+  </footer>
+  <script src="/app.js"></script>
+</body>
+</html>
